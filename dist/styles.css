@@ -1,0 +1,151 @@
+body {
+    margin: 0px;
+    font-family: Arial;
+    font-size: 12px;
+    background-color: beige;
+}
+#add-city-event {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    /*display: flex*/
+}
+
+input, select, textarea {
+    margin: 5px;
+    padding: 5px;
+    background: #c3d3eb;
+    border: 1px solid #c3d3eb;
+}
+
+textarea {
+    font-family: inherit;
+    font-size: inherit;
+    vertical-align: top;
+}
+
+input[type=submit] {
+    background: lightblue;
+    font-weight: bold;
+    cursor: pointer
+}
+
+#error {
+    display: none;
+    color: red;
+}
+
+#event-name {
+    width: 220px;
+}
+
+#event-description {
+    width: 300px;
+}
+
+#event-name {
+    width: 200px;
+}
+
+#city-events {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height: 100vh;
+}
+
+.city-event {
+    width: 250px;
+    height: 250px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    overflow: auto;
+    background: #c3d3eb;
+    box-shadow: 5px 5px 5px #d3d3d3;
+    position: relative
+}
+
+.city-event .edit,
+.city-event .remove {
+    position: absolute;
+    top: 5px;
+    cursor: pointer
+}
+
+.city-event h2 {
+    color: blue;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /* text-transform: capitalize */
+}
+
+.city-event h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: rgb(211, 89, 89);
+}
+
+.description {
+    color: green;
+    text-align: justify;
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid blue;
+}
+
+.date-event {
+    text-transform : capitalize;
+}
+
+.city-event .remove {
+    right: 5px
+}
+
+.city-event .edit {
+    right: 20px
+}
+
+div.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: rgba(0, 0, 0, 0.8);
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+div.modal {
+    width: 250px;
+    height: 150px;
+    border: 1px solid black;
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+    margin-top: 50vh;
+    margin-left: 50vw;
+    transform: translate(-50%,-50%);
+}
+
+button {
+    border: 0px;
+    padding: 5px;
+    border: 1px solid black;
+    margin: 0px 10px;
+    cursor: pointer;
+    /*text-transform: uppercase;*/
+}
+
+.cancel {
+    background-color: rgb(206, 146, 146);
+}
+
+.confirm {
+    background-color: rgb(160, 229, 160);
+}

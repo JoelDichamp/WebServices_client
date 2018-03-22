@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css"> </head>
+    <title> City Events </title>
+</head>
+<body>
+    <div class="overlay">
+        <div class="modal">
+            <h4>Attention</h4>
+            <p id="msg-modal">Confirmez-vous la suppression de l'évènement</p>
+    
+            <div class="buttons">
+                <button class="cancel">Annuler</button>
+                <button class="confirm">Confirmer</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="city-events"></div>
+
+    <form id="add-city-event">
+        <input type="text" id="event-name" placeholder="Evènement" maxlength="80">
+        <textarea id="description" rows="1" cols="50" placeholder="Description" maxlength="255"></textarea>
+        <input type="text" id="event-spot" placeholder="Lieu" maxlength="80">
+        <input type="date" id="event-date">
+        <input type="time" id="event-time">
+        <select id="category"></select>
+        <ul id="error">
+        </ul>
+        <input type="submit" id="submit" value="Ajouter"> 
+    </form>
+
+    <script src="system.js"></script>
+    <script src="system-config.js"></script>
+    <script src="main.js" ></script>
+    <script>
+        System.import("main");
+    </script>
+</body>
+</html>
